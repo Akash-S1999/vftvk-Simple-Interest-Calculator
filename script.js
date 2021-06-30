@@ -16,6 +16,12 @@ function calculate(){
     var annee2 =today2.getFullYear();
     var result2=result1+annee2;
 
+    if(amount <= 0){
+        alert("Enter a positive number");
+        document.getElementById("principal").focus();
+        return false;
+    }
+
     document.getElementById("resultant").innerHTML = `If you deposit <mark>${amount}</mark>,<br>at an interest rate of 
     <mark>${rateInput}%</mark>.<br>You will receive an amount of <mark>${(amount*rateInput*selectId/100)}</mark>,<br>in the year <mark>${result2}</mark><br>`;
 }
