@@ -1,16 +1,48 @@
+<!DOCTYPE html>
 <html>
-    <head>
+
+<head>
+    <title>Simple Interest Calculator</title>
+    <link type="text/css" href="style.css" rel="stylesheet ">
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+</head>
+
+<body>
+    <div class="simple-interest">
         <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
+        <table>
+            <tr>
+                <td class="data">Amount</td>
+                <td> <input id="amount" type="text" /></td>
+            </tr>
+            <tr>
+                <td class="data">Interest Rate</td>
+                <td> <input type="range" min="0.5" max="30" value="0.5" onchange="rateValue(this.value);"><span><output
+                            id="rateInput">0.5</output>%</span></td>
+            </tr>
+            <tr>
+                <td class="data">No. of Years</td>
+                <td> <select id="selectId" type="number">
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                        <option value=5>5</option>
+                        <option value=6>6</option>
+                        <option value=7>7</option>
+                        <option value=8>8</option>
+                        <option value=9>9</option>
+                        <option value=10>10</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td class="data"><button onclick="calculate()">Compute Interest</button></td>
+            </tr>
+        </table>
+        <p class="data" id="resultant"></p>
+        <div>
+            <p>&copy; Everyone Can Get Rich<p>
+        </div>
+    </div>
+</body>
 </html>
